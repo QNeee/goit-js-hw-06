@@ -28,9 +28,6 @@ function pushBoxes() {
 function destroyBoxes() {
   location.reload();
 }
-buttonCreate.addEventListener("click", () => {
-  pushBoxes();
-});
-buttonDestroy.addEventListener("click", () => {
-  destroyBoxes();
-});
+buttonCreate.addEventListener("click", pushBoxes);
+buttonDestroy.addEventListener("click", destroyBoxes);
+
