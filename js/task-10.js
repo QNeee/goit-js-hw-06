@@ -18,8 +18,10 @@ function createBoxes(amount) {
     listDiv.style.backgroundColor = getRandomHexColor();
     boxSizes += 10;
     boxes.push(listDiv);
+
   }
-  mainDiv.append(...boxes);
+  mainDiv.prepend(...boxes);
+
 }
 
 function destroyBoxes() {
@@ -27,5 +29,6 @@ function destroyBoxes() {
 }
 buttonCreate.addEventListener("click", () => {
   createBoxes(input.value);
+  input.value = 0;
 });
 buttonDestroy.addEventListener("click", destroyBoxes);
